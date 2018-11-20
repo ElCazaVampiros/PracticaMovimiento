@@ -1,0 +1,21 @@
+﻿<Window x:Class="PracticaMovimiento.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticaMovimiento"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Canvas>
+        <Canvas Visibility="Visible" Name="miCanvas" KeyDown="miCanvas_KeyDown" KeyUp="miCanvas_KeyUp" Focusable="True">
+            <Image Name="imgGato" Source="cat.png" Width="96" Height="90" Canvas.Left="309" Canvas.Top="470" Stretch="UniformToFill"/>
+            <Image Name="imgCarro" Source="car.png" Width="100" Height="60" Stretch="Uniform" Canvas.Left="32" Canvas.Top="139" />
+            <TextBlock x:Name="lblInterseccionX" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="10"><Run Text="No hay intersecci"/><Run Text="ón en X"/></TextBlock>
+            <TextBlock x:Name="lblInterseccionY" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="31"><Run Text="No hay intersecci"/><Run Text="ón en "/><Run Text="Y"/></TextBlock>
+            <TextBlock x:Name="lblColision" Canvas.Left="10" TextWrapping="Wrap" Text="No hay colisión" Canvas.Top="52"/>
+        </Canvas>
+        <Canvas Visibility="Collapsed" Name="canvasGameOver">
+            <TextBlock Text="Game Over" Canvas.Left="209" Canvas.Top="209" FontSize="72" Foreground="#FFF71111" />
+        </Canvas>
+    </Canvas>
+</Window>
